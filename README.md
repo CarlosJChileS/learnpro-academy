@@ -6,8 +6,6 @@
 ![Stripe](https://img.shields.io/badge/Payments-Stripe-635BFF?logo=stripe&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 
-🔗 **Live demo:** [arquitectura-learn-pro-pi.vercel.app](https://arquitectura-learn-pro-pi.vercel.app)
-
 **Complete online course platform** — subscriptions and payments with Stripe, course delivery, and an admin panel — powered by a serverless backend of **30 Supabase Edge Functions**.
 
 ## Highlights
@@ -49,8 +47,6 @@ docker compose up --build
 ## 🇪🇸 Español
 
 **Plataforma completa de cursos en línea** — suscripciones y pagos con **Stripe**, entrega de cursos y panel de administración — con backend serverless de **30 Supabase Edge Functions** organizadas por dominio (pagos, cursos, usuarios).
-
-**Demo:** [arquitectura-learn-pro-pi.vercel.app](https://arquitectura-learn-pro-pi.vercel.app)
 
 **Stack:** React + TypeScript + Vite, Supabase, Stripe, Docker + nginx, despliegue en Vercel.
 
