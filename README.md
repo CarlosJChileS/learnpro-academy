@@ -1,223 +1,59 @@
-# 🎓 Academia Online - Plataforma de Cursos en Línea
+# LearnPro Academy
 
-Una plataforma completa de cursos en línea construida con React, TypeScript, Supabase y Edge Functions.
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![Supabase](https://img.shields.io/badge/Supabase-30_Edge_Functions-3FCF8E?logo=supabase&logoColor=white)
+![Stripe](https://img.shields.io/badge/Payments-Stripe-635BFF?logo=stripe&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white)
 
-## 🚀 Edge Functions Implementadas (30 funciones)
+🔗 **Live demo:** [arquitectura-learn-pro-pi.vercel.app](https://arquitectura-learn-pro-pi.vercel.app)
 
-### **💰 Pagos y Suscripciones**
-- `stripe-checkout` - Procesar checkout de Stripe
-- `stripe-payment` - Manejar pagos de Stripe  
-- `create-subscription` - Crear suscripciones
-- `cancel-subscription` - Cancelar suscripciones
-- `webhook-stripe` - Webhooks de Stripe
+**Complete online course platform** — subscriptions and payments with Stripe, course delivery, and an admin panel — powered by a serverless backend of **30 Supabase Edge Functions**.
 
-### **📊 Dashboard y Analytics**
-- `student-dashboard` - Dashboard completo para estudiantes
-- `course-analytics` - Analytics de cursos
-- `instructor-analytics` - Métricas para instructores
-- `get-course-analytics` - Obtener analytics específicos
-- `generate-course-analytics` - Generar reportes
-- `advanced-reports` - Reportes avanzados del sistema
+## Highlights
 
-### **📚 Gestión de Cursos**
-- `course-management` - Gestión completa de cursos
-- `manage-course-content` - Gestionar contenido
-- `validate-course-content` - Validar contenido
-- `admin-lessons` - Administración de lecciones
-- `admin-courses` - Administración de cursos
-- `admin-categories` - Administración de categorías
+The entire backend runs on **Supabase Edge Functions** (30 functions), organized by domain:
 
-### **📧 Notificaciones y Email**
-- `send-notification-email` - Sistema avanzado de emails
-- `send-email-notification` - Notificaciones por email
-- `send-course-reminder` - Recordatorios de cursos
-- `send-course-reminders` - Procesar recordatorios automáticos
-- `process-reminders` - Procesar recordatorios automáticos
-- `notifications-api` - API de notificaciones
+- 💰 **Payments & subscriptions** — `stripe-checkout`, `stripe-payment`, `create-subscription`, `cancel-subscription`, and more
+- 🎓 **Course delivery** — enrollment, progress tracking, certificates
+- 👤 **Users & access** — auth flows, entitlements, admin operations
 
-### **🎓 Certificados y Archivos**
-- `generate-certificate` - Generar certificados HTML
-- `process-completion-certificates` - Procesar certificados automáticamente
-- `upload-file` - Subida de archivos
-- `admin-storage` - Gestión de almacenamiento
+## Features
 
-### **🔧 Sistema y Administración**
-- `backup-system` - Sistema de backups completo
-- `health-check` - Verificación de salud del sistema
-- `database-cleanup` - Limpieza automática de base de datos
+- 📚 Course catalog with lessons and progress tracking
+- 💳 **Stripe** checkout + recurring subscriptions
+- 🛠️ Admin panel for courses, users and plans
+- 🐳 **Dockerized** — Dockerfile + docker-compose + nginx for container deploys
+- ☁️ Deployed on **Vercel** (frontend) + Supabase (backend)
 
-## ⚡ Configuración Rápida
+## Tech Stack
 
-### 1. Configuración Inicial
+React · TypeScript · Vite · shadcn/ui · Supabase (Postgres, Auth, 30 Edge Functions) · Stripe · Docker + nginx
+
+## Getting Started
+
 ```bash
-# Windows
-.\setup.ps1
-
-# Linux/Mac
-./setup.sh
-```
-
-### 2. Desplegar Edge Functions
-```bash
-# Windows
-.\supabase\deploy-functions.ps1
-
-# Linux/Mac
-./supabase/deploy-functions.sh
-```
-
-### 3. Configurar Variables de Entorno
-Ve a **Supabase Dashboard > Settings > Edge Functions** y agrega las variables desde `.env.functions`
-
-## 🛠️ Tecnologías Utilizadas
-
-- **Frontend**: React, TypeScript, Vite, Tailwind CSS, shadcn/ui
-- **Backend**: Supabase, Edge Functions (Deno)
-- **Pagos**: Stripe, PayPal
-- **Email**: Resend
-- **Base de Datos**: PostgreSQL (Supabase)
-- **Autenticación**: Supabase Auth
-- **Storage**: Supabase Storage
-
-## 📂 Estructura del Proyecto
-
-```
-arquitecturaconjunto/
-├── src/                    # Frontend React
-├── supabase/
-│   ├── functions/         # Edge Functions (30 funciones)
-│   ├── migrations/        # Migraciones de BD
-│   └── config.toml       # Configuración Supabase
-├── scripts/              # Scripts de despliegue
-└── docs/                # Documentación
-```
-
-## 🔐 Características de Seguridad
-
-- ✅ Autenticación JWT verificada
-- ✅ Roles y permisos (admin/instructor/student)
-- ✅ Políticas RLS en todas las tablas
-- ✅ Verificación de firmas en webhooks
-- ✅ Validación de datos en Edge Functions
-
-## 📊 Analytics y Reportes
-
-- **Métricas de Ingresos**: Análisis de pagos y suscripciones
-- **Comportamiento de Usuarios**: Sesiones, vistas de página
-- **Rendimiento de Cursos**: Inscripciones, completación
-- **Dashboard para Instructores**: Métricas personalizadas
-- **Reportes Avanzados**: Exportación en JSON/CSV
-
-## 🎯 Funcionalidades Principales
-
-### Para Estudiantes
-- 📚 Catálogo de cursos con filtros
-- 🎥 Reproductor de video integrado
-- 📈 Seguimiento de progreso
-- 🏆 Certificados automáticos
-- 📱 Dashboard personalizado
-- 💳 Suscripciones y pagos
-
-### Para Instructores
-- ✏️ Editor de cursos avanzado
-- 📊 Analytics detallados
-- 👥 Gestión de estudiantes
-- 📧 Sistema de notificaciones
-- 💰 Reportes de ingresos
-
-### Para Administradores
-- 🔧 Panel de administración completo
-- 👤 Gestión de usuarios y roles
-- 📈 Analytics del sistema
-- 🔄 Backups automáticos
-- 🛡️ Monitoreo de seguridad
-
-## 🚀 Despliegue
-
-### Desarrollo Local
-```bash
-# Iniciar Supabase local
-supabase start
-
-# Iniciar frontend
+npm install
+cp .env.example .env     # Supabase + Stripe keys
 npm run dev
-
-# Desplegar funciones
-supabase functions deploy
 ```
 
-### Producción
-1. Configura las variables de entorno en Supabase
-2. Despliega las Edge Functions
-3. Configura los webhooks según `webhooks-config.md`
-4. Despliega el frontend en Vercel/Netlify
+Docker route:
 
-## 📚 Documentación
-
-- [Configuración de Webhooks](supabase/webhooks-config.md)
-- [Variables de Entorno](supabase/.env.functions)
-- [Migraciones de BD](supabase/migrations/)
-- [API de Edge Functions](docs/api.md)
-
-## 🔗 Enlaces Útiles
-
-- [Supabase Dashboard](https://supabase.com/dashboard)
-- [Stripe Dashboard](https://dashboard.stripe.com)
-- [Documentación Supabase](https://docs.supabase.com)
-
-## 🤝 Contribuciones
-
-1. Fork el proyecto
-2. Crea tu rama de feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver `LICENSE` para más detalles.
+```bash
+docker compose up --build
+```
 
 ---
 
-## How to edit this project
+## 🇪🇸 Español
 
-You can edit this project in several ways:
+**Plataforma completa de cursos en línea** — suscripciones y pagos con **Stripe**, entrega de cursos y panel de administración — con backend serverless de **30 Supabase Edge Functions** organizadas por dominio (pagos, cursos, usuarios).
 
-### Use Lovable
+**Demo:** [arquitectura-learn-pro-pi.vercel.app](https://arquitectura-learn-pro-pi.vercel.app)
 
-Simply open [Lovable](https://lovable.dev/projects/6a4a05c4-befa-49b2-b21a-882f2762f3ab) and start prompting.
+**Stack:** React + TypeScript + Vite, Supabase, Stripe, Docker + nginx, despliegue en Vercel.
 
-You can save a snapshot in order to capture the current state of your repository, and later create a fork from that snapshot to continue building on it.
-
-### Use your preferred IDE
-
-If you want to work locally using your preferred IDE, you can clone this project and push changes. Lovable will remain in sync with your changes.
-
-### Use GitHub Codespaces
-
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-- Supabase
-- Edge Functions
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/6a4a05c4-befa-49b2-b21a-882f2762f3ab) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```bash
+npm install && npm run dev
+```
